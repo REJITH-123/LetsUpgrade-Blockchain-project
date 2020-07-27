@@ -1,0 +1,28 @@
+pragma solidity >=0.4.17 <0.6.12;
+
+contract ReportCard {
+    
+
+            string public name;
+            string public class;
+            uint public rollNumber;
+            uint public marks;
+            
+             function Reportcard(string studentName, string newclass, uint newrollNumber, uint newmarks) public{
+                 
+                 name = studentName;
+                 class = newclass;
+                 rollNumber = newrollNumber;
+                 marks = newmarks;}
+                 
+             function newReportCardDetails(string studentName, string newclass, uint newrollNumber, uint newmarks) public{  
+                name = studentName;
+                 class = newclass;
+                 rollNumber = newrollNumber;
+                 marks = newmarks;} 
+                 
+
+             function getCurrentReportCardDetails()public view returns(string, string, uint, uint){
+                
+             return (name, class, rollNumber, marks);}
+}
